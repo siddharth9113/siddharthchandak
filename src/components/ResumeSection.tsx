@@ -5,49 +5,65 @@ import { Progress } from "@/components/ui/progress";
 
 const ResumeSection = () => {
   const skills = [
-    { name: "Web Development", level: 90 },
-    { name: "UI/UX Design", level: 85 },
-    { name: "React.js", level: 92 },
-    { name: "Node.js", level: 80 },
-    { name: "TypeScript", level: 85 },
-    { name: "Tailwind CSS", level: 95 },
+    { name: "Strategy & Consulting", level: 90 },
+    { name: "Business Analysis", level: 85 },
+    { name: "Market Research", level: 88 },
+    { name: "Project Management", level: 82 },
+    { name: "Entrepreneurship", level: 92 },
+    { name: "Team Leadership", level: 85 },
   ];
 
   const workExperience = [
     {
-      position: "Senior Web Developer",
-      company: "Tech Solutions Inc.",
-      period: "2023 - Present",
+      position: "Consultative Sales Intern",
+      company: "MOKOBARA LIFESTYLE",
+      period: "May - Jul 2024",
       responsibilities: [
-        "Led a team of 5 frontend developers in building scalable web applications",
-        "Implemented responsive designs and optimized performance",
-        "Collaborated with UI/UX designers to create intuitive user experiences",
+        "Increased revenue by ₹20 Lakh within two months by re-engaging abandoned cart customers",
+        "Spearheaded the development of a comprehensive B2B catalog for clients like Google and Amazon",
+        "Collaborated with leaders across 7+ departments including sourcing, branding, growth and retail",
       ],
     },
     {
-      position: "Frontend Developer",
-      company: "Digital Innovations Co.",
-      period: "2020 - 2023",
+      position: "Strategy Consulting Intern",
+      company: "KAVACH (Shark Tank Funded)",
+      period: "May - Jul 2024",
       responsibilities: [
-        "Developed responsive user interfaces for various client projects",
-        "Implemented modern JavaScript frameworks like React and Vue.js",
-        "Worked in an agile environment with cross-functional teams",
+        "Assembled & led a team of 8 to provide strategic direction for the company's services",
+        "Developed a 20 questions+ survey to assess students' mental health needs",
+        "Delivered tailored solutions that impacted trajectory of 70% of company's current services",
+      ],
+    },
+    {
+      position: "Founder's Office Intern",
+      company: "ROADO",
+      period: "Jan - Aug 2023",
+      responsibilities: [
+        "Curated a market entry strategy for the company into USA through 15+ stakeholder meetings",
+        "Led marketing campaign generating 1,000+ qualified leads across 4 customer personas",
+        "Constructed a model demonstrating software savings of >$50,000/year for enterprise clients",
       ],
     },
   ];
 
   const education = [
     {
-      degree: "Master's in Computer Science",
-      institution: "University of Technology",
-      period: "2016 - 2018",
-      details: "Specialized in Human-Computer Interaction and Web Technologies",
+      degree: "Undergraduate Student",
+      institution: "Ashoka University",
+      period: "Class of 2025",
+      details: "3.67/4 CGPA",
     },
     {
-      degree: "Bachelor's in Information Technology",
-      institution: "State University",
-      period: "2012 - 2016",
-      details: "Graduated with honors, GPA 3.8/4.0",
+      degree: "High School",
+      institution: "National Public School, Bangalore",
+      period: "2022",
+      details: "CBSE: 98.4%",
+    },
+    {
+      degree: "Secondary Education",
+      institution: "National Public School, Bangalore",
+      period: "2020",
+      details: "CBSE: 96.4%",
     },
   ];
 
@@ -57,7 +73,7 @@ const ResumeSection = () => {
         <div className="text-center mb-12">
           <h2 className="section-heading">Resume</h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-            A summary of my professional experience, skills, and education.
+            A summary of my professional experience, education, and achievements.
           </p>
           <Button className="mt-6 gap-2" asChild>
             <a href="#" download>
@@ -120,19 +136,23 @@ const ResumeSection = () => {
               ))}
             </div>
             
-            <h3 className="section-subheading border-b pb-2 mb-8 mt-12">Certifications</h3>
+            <h3 className="section-subheading border-b pb-2 mb-8 mt-12">Positions & Achievements</h3>
             <div className="space-y-4">
               <div className="p-4 border rounded-lg hover:shadow-md transition-shadow">
-                <h4 className="font-medium">Advanced Web Development</h4>
-                <p className="text-sm text-muted-foreground">Frontend Masters, 2023</p>
+                <h4 className="font-medium">Teaching Assistant</h4>
+                <p className="text-sm text-muted-foreground">Course: 'Business Analysis and Strategy', Sep 2024 - Present</p>
               </div>
               <div className="p-4 border rounded-lg hover:shadow-md transition-shadow">
-                <h4 className="font-medium">UI/UX Design Fundamentals</h4>
-                <p className="text-sm text-muted-foreground">Design Academy, 2022</p>
+                <h4 className="font-medium">Entrepreneurship Representative</h4>
+                <p className="text-sm text-muted-foreground">Ashoka University, May 2024 - Present</p>
               </div>
               <div className="p-4 border rounded-lg hover:shadow-md transition-shadow">
-                <h4 className="font-medium">React.js Advanced Patterns</h4>
-                <p className="text-sm text-muted-foreground">React Training, 2021</p>
+                <h4 className="font-medium">National Finalist</h4>
+                <p className="text-sm text-muted-foreground">Boston Consulting Group Ideathon, 2024</p>
+              </div>
+              <div className="p-4 border rounded-lg hover:shadow-md transition-shadow">
+                <h4 className="font-medium">Semi Finalist</h4>
+                <p className="text-sm text-muted-foreground">Wharton Global High School Investment Competition, 2021</p>
               </div>
             </div>
           </div>

@@ -9,20 +9,20 @@ const AboutSection = () => {
         <div className="text-center mb-12">
           <h2 className="section-heading">About Me</h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-            Get to know me better – what inspires me, what I do, and what I'm passionate about.
+            Entrepreneur, strategist, and researcher with a passion for building impactful solutions.
           </p>
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
           <div>
             <p className="text-lg mb-4">
-              Hello! I'm Siddharth, a passionate creator focused on building impactful digital experiences. With a background in design and development, I combine technical expertise with creative problem-solving to deliver solutions that are both functional and elegant.
+              I'm Siddharth, a student at Ashoka University (3.67/4 CGPA) with a background in strategy, entrepreneurship, and research. I'm passionate about identifying opportunities and building innovative solutions that make a difference.
             </p>
             <p className="text-lg mb-4">
-              I believe in the power of technology to transform and enhance people's lives. My approach centers on understanding user needs and crafting experiences that are intuitive, accessible, and delightful.
+              My journey includes co-founding ventures like The 'I Don't Know' Podcast, 30BYTHIRTY, and MEDRIVE, as well as interning at companies like MOKOBARA LIFESTYLE, KAVACH, ROADO, and HELIOS CAPITAL.
             </p>
             <p className="text-lg">
-              When I'm not coding or designing, you might find me exploring new hiking trails, experimenting with photography, or diving into a good book. I'm constantly learning and growing, both professionally and personally.
+              With experience in both strategy consulting and entrepreneurship, I combine analytical thinking with creative problem-solving to drive results. When I'm not working, I enjoy exploring new ideas, learning about emerging technologies, and connecting with like-minded individuals.
             </p>
           </div>
           
@@ -34,7 +34,7 @@ const AboutSection = () => {
                 </div>
                 <h3 className="font-medium text-lg mb-2">Who I Am</h3>
                 <p className="text-muted-foreground">
-                  A creative professional passionate about blending design and technology.
+                  A strategy-focused entrepreneur with a passion for building impactful solutions.
                 </p>
               </CardContent>
             </Card>
@@ -46,7 +46,7 @@ const AboutSection = () => {
                 </div>
                 <h3 className="font-medium text-lg mb-2">What I Do</h3>
                 <p className="text-muted-foreground">
-                  Create digital experiences that solve problems and delight users.
+                  Build ventures, develop strategies, and create impactful business solutions.
                 </p>
               </CardContent>
             </Card>
@@ -58,7 +58,7 @@ const AboutSection = () => {
                 </div>
                 <h3 className="font-medium text-lg mb-2">My Experience</h3>
                 <p className="text-muted-foreground">
-                  Years of working on diverse projects across various industries.
+                  Internships at growth-stage startups and launching my own ventures.
                 </p>
               </CardContent>
             </Card>
@@ -68,9 +68,9 @@ const AboutSection = () => {
                 <div className="h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center mb-4">
                   <BookOpen className="h-6 w-6 text-primary" />
                 </div>
-                <h3 className="font-medium text-lg mb-2">My Passion</h3>
+                <h3 className="font-medium text-lg mb-2">My Education</h3>
                 <p className="text-muted-foreground">
-                  Continuous learning and sharing knowledge with the community.
+                  Ashoka University (3.67/4 CGPA) and National Public School, Bangalore (98.4%).
                 </p>
               </CardContent>
             </Card>

@@ -4,32 +4,53 @@ import { Calendar, Award, Briefcase, GraduationCap } from "lucide-react";
 const TimelineSection = () => {
   const timelineItems = [
     {
-      year: "2023",
-      title: "Senior Web Developer",
-      organization: "Tech Solutions Inc.",
-      description: "Leading a team of developers to build scalable web applications.",
+      year: "May - Jul 2024",
+      title: "Consultative Sales Intern",
+      organization: "MOKOBARA LIFESTYLE",
+      description: "Increased revenue by ₹20 Lakh within two months. Developed B2B catalog for Google, Amazon. Collaborated across 7+ departments.",
       icon: <Briefcase className="h-5 w-5" />,
     },
     {
-      year: "2021",
-      title: "Web Development Award",
-      organization: "Regional Tech Conference",
-      description: "Recognized for outstanding contributions to web development.",
-      icon: <Award className="h-5 w-5" />,
-    },
-    {
-      year: "2020",
-      title: "Frontend Developer",
-      organization: "Digital Innovations Co.",
-      description: "Developed responsive user interfaces for various client projects.",
+      year: "May - Jul 2024",
+      title: "Strategy Consulting Intern",
+      organization: "KAVACH (Shark Tank Funded)",
+      description: "Led team of 8 providing strategic direction. Developed survey for mental health needs. Delivered solutions impacting 70% of services.",
       icon: <Briefcase className="h-5 w-5" />,
     },
     {
-      year: "2018",
-      title: "Master's in Computer Science",
-      organization: "University of Technology",
-      description: "Specialized in Human-Computer Interaction and Web Technologies.",
-      icon: <GraduationCap className="h-5 w-5" />,
+      year: "Jan - Aug 2023",
+      title: "Founder's Office Intern",
+      organization: "ROADO",
+      description: "Curated US market entry strategy. Led marketing campaign generating 1,000+ leads. Demonstrated software savings of >$50,000/year.",
+      icon: <Briefcase className="h-5 w-5" />,
+    },
+    {
+      year: "Apr - Jun 2021",
+      title: "Equity Research Intern",
+      organization: "HELIOS CAPITAL",
+      description: "Developed strategic report on Indian paints industry. Identified Indigo Paints as high-potential player (2x profit growth).",
+      icon: <Briefcase className="h-5 w-5" />,
+    },
+    {
+      year: "Oct 2024 - Present",
+      title: "Co-Founder",
+      organization: "THE 'I DON'T KNOW' PODCAST",
+      description: "Decoded 'Venture Capital' with veteran VCs. Explored 'India Stack & AI' with tech policy maker who represented India.",
+      icon: <Briefcase className="h-5 w-5" />,
+    },
+    {
+      year: "Feb 2023 - Present",
+      title: "Co-Founder",
+      organization: "30BYTHIRTY",
+      description: "Achieved sales of >₹3.2 Lakh in 6 months. Managed end-to-end operations for custom merchandise to universities and corporates.",
+      icon: <Briefcase className="h-5 w-5" />,
+    },
+    {
+      year: "May 2019 - Jan 2022",
+      title: "Co-Founder",
+      organization: "MEDRIVE",
+      description: "Launched healthcare app for digitizing medical records. Built tech team and worked with Mr. Parag Dhol (VC behind Policy Bazaar).",
+      icon: <Briefcase className="h-5 w-5" />,
     },
   ];
 
@@ -39,7 +60,7 @@ const TimelineSection = () => {
         <div className="text-center mb-12">
           <h2 className="section-heading">My Journey</h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-            A timeline of key milestones in my professional and educational journey.
+            A timeline of my professional experiences and entrepreneurial ventures.
           </p>
         </div>
         
@@ -47,7 +68,7 @@ const TimelineSection = () => {
           {timelineItems.map((item, index) => (
             <div 
               key={index} 
-              className="timeline-item"
+              className="timeline-item mb-8"
             >
               <div className="flex flex-col md:flex-row md:items-center mb-2">
                 <div className="flex items-center">

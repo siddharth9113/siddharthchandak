@@ -12,7 +12,7 @@ const HeroSection = () => {
               Hi, I'm <span className="text-primary">Siddharth Chandak</span>
             </h1>
             <p className="text-xl md:text-2xl text-muted-foreground mb-8">
-              I design and build digital experiences that make people's lives simpler.
+              Entrepreneur, strategist, and researcher building impactful solutions at the intersection of business and technology.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Button 

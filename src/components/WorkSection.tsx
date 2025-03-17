@@ -6,26 +6,26 @@ import { Card, CardContent } from "@/components/ui/card";
 const WorkSection = () => {
   const projects = [
     {
-      title: "E-commerce Platform",
-      description: "A modern e-commerce platform with a seamless checkout experience and responsive design.",
-      image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d",
-      technologies: ["React", "Node.js", "MongoDB", "Stripe"],
+      title: "The 'I Don't Know' Podcast",
+      description: "A podcast focused on understanding industries from first principles, featuring conversations with industry leaders and experts.",
+      image: "https://images.unsplash.com/photo-1590602847861-f357a9332bbc",
+      technologies: ["Podcasting", "Industry Analysis", "Interview"],
       demoUrl: "#",
       repoUrl: "#",
     },
     {
-      title: "Portfolio Website",
-      description: "A creative portfolio website for a professional photographer to showcase their work.",
-      image: "https://images.unsplash.com/photo-1518770660439-4636190af475",
-      technologies: ["Next.js", "Tailwind CSS", "Framer Motion"],
+      title: "30BYTHIRTY",
+      description: "A self-made brand providing custom merchandise to universities and enterprises in NCR, achieving sales of >₹3.2 Lakh in 6 months.",
+      image: "https://images.unsplash.com/photo-1620799140408-edc6dcb6d633",
+      technologies: ["E-commerce", "Merchandise", "B2B Sales"],
       demoUrl: "#",
       repoUrl: "#",
     },
     {
-      title: "Task Management App",
-      description: "A productivity app for teams to manage projects, track progress, and collaborate effectively.",
-      image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6",
-      technologies: ["React", "Firebase", "Material UI"],
+      title: "MEDRIVE",
+      description: "One of the first apps in India focused on digitizing medical records, built with guidance from Mr. Parag Dhol, VC behind Policy Bazaar.",
+      image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef",
+      technologies: ["Healthcare", "UHI", "Digital Records"],
       demoUrl: "#",
       repoUrl: "#",
     },
@@ -37,7 +37,7 @@ const WorkSection = () => {
         <div className="text-center mb-12">
           <h2 className="section-heading">My Work</h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-            A selection of my recent projects and the technologies I've worked with.
+            A selection of my entrepreneurial ventures and projects.
           </p>
         </div>
         
@@ -65,13 +65,13 @@ const WorkSection = () => {
                   <Button size="sm" variant="outline" className="flex items-center gap-1" asChild>
                     <a href={project.demoUrl} target="_blank" rel="noopener noreferrer">
                       <ExternalLink className="h-4 w-4" />
-                      Demo
+                      View Project
                     </a>
                   </Button>
                   <Button size="sm" variant="outline" className="flex items-center gap-1" asChild>
                     <a href={project.repoUrl} target="_blank" rel="noopener noreferrer">
                       <Github className="h-4 w-4" />
-                      Code
+                      Details
                     </a>
                   </Button>
                 </div>
@@ -82,8 +82,8 @@ const WorkSection = () => {
         
         <div className="text-center mt-10">
           <Button size="lg" asChild>
-            <a href="#" target="_blank" rel="noopener noreferrer">
-              View All Projects
+            <a href="#contact" rel="noopener noreferrer">
+              Contact Me for More Projects
             </a>
           </Button>
         </div>
