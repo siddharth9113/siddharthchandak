@@ -37,7 +37,7 @@ const HeroSection = () => {
             <div className="relative">
               <div className="absolute -inset-0.5 bg-gradient-to-r from-primary to-purple-300 rounded-2xl blur opacity-30 animate-pulse-slow"></div>
               <img 
-                src="https://images.unsplash.com/photo-1649972904349-6e44c42644a7" 
+                src="/lovable-uploads/0cefa0c7-b667-4d54-90ff-78ff179a4e87.png" 
                 alt="Siddharth Chandak" 
                 className="rounded-2xl w-full h-auto object-cover shadow-lg relative z-10"
               />
