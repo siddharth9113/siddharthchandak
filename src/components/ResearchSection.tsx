@@ -14,7 +14,7 @@ const ResearchSection = () => {
       title: "Analysis of Venture Capital Investment Patterns in Indian Startups",
       abstract: "This paper explores the changing landscape of venture capital investments in India, with a focus on emerging sectors and investment trends from 2018-2023.",
       keywords: ["Venture Capital", "Indian Startups", "Investment Trends"],
-      pdfUrl: "/research/venture-capital-analysis.pdf",
+      externalUrl: "https://drive.google.com/file/d/1XsWR54-WFPI-K3bPNKOY7HgUxB2E2xz4/view?usp=sharing",
       date: "October 2023",
     },
     {
@@ -34,6 +34,12 @@ const ResearchSection = () => {
       date: "July 2022",
     },
   ];
+
+  const handleViewPaper = (paper: typeof researchPapers[0]) => {
+    if (paper.externalUrl) {
+      window.open(paper.externalUrl, "_blank", "noopener,noreferrer");
+    }
+  };
 
   return (
     <section id="research" className="py-20 bg-background">
@@ -103,51 +109,75 @@ const ResearchSection = () => {
                     </div>
                     
                     <div className="flex flex-wrap gap-3">
-                      <Button variant="default" className="gap-2">
+                      <Button 
+                        variant="default" 
+                        className="gap-2"
+                        onClick={() => handleViewPaper(paper)}
+                      >
                         <ExternalLink className="h-4 w-4" />
-                        View Full Paper
+                        {paper.externalUrl ? "View on Google Drive" : "View Full Paper"}
                       </Button>
-                      <Button variant="outline" className="gap-2">
-                        <Download className="h-4 w-4" />
-                        Download PDF
-                      </Button>
+                      {!paper.externalUrl && (
+                        <Button variant="outline" className="gap-2">
+                          <Download className="h-4 w-4" />
+                          Download PDF
+                        </Button>
+                      )}
                     </div>
                   </CardContent>
                 </Card>
                 
-                <Card>
-                  <CardContent className="p-6">
-                    <Tabs defaultValue="preview" className="w-full">
-                      <TabsList className="mb-4">
-                        <TabsTrigger value="preview">PDF Preview</TabsTrigger>
-                        <TabsTrigger value="citation">Citation</TabsTrigger>
-                      </TabsList>
-                      <TabsContent value="preview" className="mt-0">
-                        <div className="border rounded-lg aspect-[4/3] overflow-hidden bg-muted">
-                          <iframe 
-                            src={paper.pdfUrl} 
-                            title={paper.title}
-                            className="w-full h-full"
-                            style={{ minHeight: "500px" }}
-                          />
-                        </div>
-                        <p className="text-xs text-muted-foreground mt-2">
-                          Note: If the PDF doesn't load properly, you can download it using the button above.
-                        </p>
-                      </TabsContent>
-                      <TabsContent value="citation" className="mt-0">
-                        <div className="bg-muted p-4 rounded-lg">
-                          <p className="text-sm font-mono">
-                            Chandak, S. ({paper.date.split(" ")[1]}). {paper.title}. Research Repository, Ashoka University.
+                {!paper.externalUrl && (
+                  <Card>
+                    <CardContent className="p-6">
+                      <Tabs defaultValue="preview" className="w-full">
+                        <TabsList className="mb-4">
+                          <TabsTrigger value="preview">PDF Preview</TabsTrigger>
+                          <TabsTrigger value="citation">Citation</TabsTrigger>
+                        </TabsList>
+                        <TabsContent value="preview" className="mt-0">
+                          <div className="border rounded-lg aspect-[4/3] overflow-hidden bg-muted">
+                            <iframe 
+                              src={paper.pdfUrl} 
+                              title={paper.title}
+                              className="w-full h-full"
+                              style={{ minHeight: "500px" }}
+                            />
+                          </div>
+                          <p className="text-xs text-muted-foreground mt-2">
+                            Note: If the PDF doesn't load properly, you can download it using the button above.
                           </p>
-                        </div>
-                        <Button variant="outline" size="sm" className="mt-4">
-                          Copy Citation
-                        </Button>
-                      </TabsContent>
-                    </Tabs>
-                  </CardContent>
-                </Card>
+                        </TabsContent>
+                        <TabsContent value="citation" className="mt-0">
+                          <div className="bg-muted p-4 rounded-lg">
+                            <p className="text-sm font-mono">
+                              Chandak, S. ({paper.date.split(" ")[1]}). {paper.title}. Research Repository, Ashoka University.
+                            </p>
+                          </div>
+                          <Button variant="outline" size="sm" className="mt-4">
+                            Copy Citation
+                          </Button>
+                        </TabsContent>
+                      </Tabs>
+                    </CardContent>
+                  </Card>
+                )}
+                
+                {paper.externalUrl && (
+                  <Card>
+                    <CardContent className="p-6 text-center">
+                      <p className="mb-4">This research paper is hosted on Google Drive.</p>
+                      <Button 
+                        variant="default" 
+                        className="gap-2"
+                        onClick={() => handleViewPaper(paper)}
+                      >
+                        <ExternalLink className="h-4 w-4" />
+                        Open in Google Drive
+                      </Button>
+                    </CardContent>
+                  </Card>
+                )}
               </div>
             ))}
           </div>
