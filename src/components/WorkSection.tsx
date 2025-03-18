@@ -33,21 +33,21 @@ const WorkSection = () => {
 
   const researchPapers = [
     {
-      title: "Urban Mobility Solutions for India",
-      description: "Comprehensive analysis of India's urban transportation challenges with a detailed framework for integrated, sustainable mobility solutions.",
-      technologies: ["Urban Planning", "Sustainable Mobility", "Policy Research"],
+      title: "How does crime impact mobility of women",
+      description: "Comprehensive Economic analysis of the impact of crimes rates on the time spent on outdoor activities by women",
+      technologies: ["Stata", "Economic Analysis", "Regression"],
       demoUrl: "https://drive.google.com/file/d/1CYkHNkGVow59A4Fxc7CLfRZFeUEXMUoB/view?usp=sharing",
     },
     {
-      title: "Digital Financial Inclusion in Rural India",
-      description: "Research on the impact of India Stack and digital payment innovations on financial inclusion in underserved rural communities.",
-      technologies: ["Financial Inclusion", "Digital Banking", "Rural Economics"],
+      title: "Investment Analysis of Sentinel One",
+      description: "A detailed investment analysis of USA-listed cybersecurity company, Sentinel One",
+      technologies: ["DCF", "Fundamental Analysis", "Financial Modelling"],
       demoUrl: "https://drive.google.com/file/d/18M4F848Pjqk3B5ohRO2MFq4nZp2gnvJ_/view?usp=sharing",
     },
     {
-      title: "Venture Capital in Indian Startups",
-      description: "Analysis of venture capital investment patterns in India, with a focus on emerging sectors and investment trends from 2018-2023.",
-      technologies: ["Venture Capital", "Startup Analysis", "Investment Research"],
+      title: "Bridging the MSME Financing Gap in India: The Role of the Unified Lending Interface (ULI)",
+      description: "A policy brief on how the upcoming unified lending interface could revolutionise MSME credit in India with recommendations for some structural changes to the network",
+      technologies: ["Policy Brief", "MSME financing", "India Stack"],
       demoUrl: "https://drive.google.com/file/d/1XsWR54-WFPI-K3bPNKOY7HgUxB2E2xz4/view?usp=sharing",
     },
   ];
