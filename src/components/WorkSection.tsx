@@ -26,7 +26,7 @@ const WorkSection = () => {
     {
       title: "MEDRIVE",
       description: "One of the first apps in India focused on digitizing medical records, built with guidance from Mr. Parag Dhol, VC behind Policy Bazaar.",
-      image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef",
+      image: "/lovable-uploads/bfe2bb3d-c307-4b52-9af6-127de15ff8a1.png",
       technologies: ["Healthcare", "UHI", "Digital Records"],
       demoUrl: "#",
       repoUrl: "#",
@@ -77,8 +77,12 @@ const WorkSection = () => {
                     <img 
                       src={project.image} 
                       alt={project.title} 
-                      className="w-full h-full object-cover transition-transform hover:scale-105 duration-300"
-                      style={{ objectPosition: project.title === "30BYTHIRTY" ? "center" : "center" }}
+                      className="w-full h-full object-contain md:object-cover transition-transform hover:scale-105 duration-300"
+                      style={{ 
+                        objectPosition: "center",
+                        padding: project.title === "30BYTHIRTY" || project.title === "MEDRIVE" ? "20px" : "0",
+                        backgroundColor: project.title === "MEDRIVE" ? "white" : "transparent"
+                      }}
                     />
                   </div>
                   <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4 md:hidden">
