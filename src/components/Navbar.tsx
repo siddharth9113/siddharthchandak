@@ -34,14 +34,14 @@ const Navbar = () => {
     <nav
       className={`fixed top-0 w-full z-50 transition-all duration-300 ${
         scrolled
-          ? "bg-black/80 backdrop-blur-md border-b border-white/10"
+          ? "bg-white/80 backdrop-blur-md shadow-sm"
           : "bg-transparent"
       }`}
     >
       <div className="container mx-auto px-4 md:px-6 py-4">
         <div className="flex items-center justify-between">
-          <a href="#" className="font-playfair text-xl font-bold text-white">
-            Siddharth<span className="text-[#9b87f5]">.C</span>
+          <a href="#" className="font-poppins text-xl font-bold text-foreground">
+            Siddharth<span className="text-primary">.C</span>
           </a>
 
           {/* Desktop Navigation */}
@@ -50,12 +50,12 @@ const Navbar = () => {
               <a
                 key={item.name}
                 href={item.href}
-                className="px-3 py-2 text-sm font-medium text-gray-400 hover:text-white transition-colors"
+                className="px-3 py-2 text-sm font-medium text-foreground hover:text-primary transition-colors"
               >
                 {item.name}
               </a>
             ))}
-            <Button className="ml-4 bg-white text-black hover:bg-white/90 rounded-xl">Contact Me</Button>
+            <Button className="ml-4">Contact Me</Button>
           </div>
 
           {/* Mobile Navigation Toggle */}
@@ -65,9 +65,9 @@ const Navbar = () => {
             aria-label="Toggle Menu"
           >
             {isMenuOpen ? (
-              <X className="h-6 w-6 text-white" />
+              <X className="h-6 w-6 text-foreground" />
             ) : (
-              <Menu className="h-6 w-6 text-white" />
+              <Menu className="h-6 w-6 text-foreground" />
             )}
           </button>
         </div>
@@ -80,13 +80,13 @@ const Navbar = () => {
                 <a
                   key={item.name}
                   href={item.href}
-                  className="px-3 py-2 text-sm font-medium text-gray-400 hover:text-white transition-colors"
+                  className="px-3 py-2 text-sm font-medium text-foreground hover:text-primary transition-colors"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {item.name}
                 </a>
               ))}
-              <Button className="mt-2 w-full bg-white text-black hover:bg-white/90 rounded-xl">Contact Me</Button>
+              <Button className="mt-2 w-full">Contact Me</Button>
             </div>
           </div>
         )}
