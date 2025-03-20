@@ -17,7 +17,7 @@ const WorkSection = () => {
     {
       title: "30BYTHIRTY",
       description: "A self-made brand providing custom merchandise to universities and enterprises in NCR, achieving sales of >₹3.2 Lakh in 6 months.",
-      image: "https://images.unsplash.com/photo-1620799140408-edc6dcb6d633",
+      image: "/lovable-uploads/a54a182b-f6df-4365-94a2-2b08efeabfa5.png",
       technologies: ["E-commerce", "Merchandise", "B2B Sales"],
       demoUrl: "#",
       repoUrl: "#",
@@ -65,52 +65,58 @@ const WorkSection = () => {
           </p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="space-y-10">
           {projects.map((project, index) => (
             <Card 
               key={index} 
               className="overflow-hidden hover:shadow-lg transition-shadow border-0 rounded-xl bg-gradient-to-br from-background to-muted"
             >
-              <div className="relative">
-                <div className="aspect-video overflow-hidden">
-                  <img 
-                    src={project.image} 
-                    alt={project.title} 
-                    className="w-full h-full object-cover transition-transform hover:scale-105 duration-300"
-                  />
+              <div className="flex flex-col md:flex-row">
+                <div className="md:w-2/5 relative">
+                  <div className="h-full overflow-hidden">
+                    <img 
+                      src={project.image} 
+                      alt={project.title} 
+                      className="w-full h-full object-cover transition-transform hover:scale-105 duration-300"
+                      style={{ objectPosition: project.title === "30BYTHIRTY" ? "center" : "center" }}
+                    />
+                  </div>
+                  <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4 md:hidden">
+                    <h3 className="text-xl font-medium text-white">{project.title}</h3>
+                  </div>
                 </div>
-                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4">
-                  <h3 className="text-xl font-medium text-white">{project.title}</h3>
+                <div className="md:w-3/5">
+                  <CardContent className="p-6">
+                    <h3 className="text-xl font-medium mb-2 hidden md:block">{project.title}</h3>
+                    <p className="text-muted-foreground mb-4">{project.description}</p>
+                    <div className="flex flex-wrap gap-2 mb-4">
+                      {project.technologies.map((tech, i) => (
+                        <span key={i} className="text-xs bg-accent px-2 py-1 rounded-full">
+                          {tech}
+                        </span>
+                      ))}
+                    </div>
+                    <div className="flex space-x-2">
+                      <Button size="sm" variant="outline" className="flex items-center gap-1" asChild>
+                        <a href={project.demoUrl} target="_blank" rel="noopener noreferrer">
+                          {project.isYoutube ? (
+                            <Youtube className="h-4 w-4" />
+                          ) : (
+                            <ExternalLink className="h-4 w-4" />
+                          )}
+                          {project.isYoutube ? "Watch on YouTube" : "View Project"}
+                        </a>
+                      </Button>
+                      <Button size="sm" variant="outline" className="flex items-center gap-1" asChild>
+                        <a href={project.repoUrl} target="_blank" rel="noopener noreferrer">
+                          <Github className="h-4 w-4" />
+                          Details
+                        </a>
+                      </Button>
+                    </div>
+                  </CardContent>
                 </div>
               </div>
-              <CardContent className="p-6">
-                <p className="text-muted-foreground mb-4">{project.description}</p>
-                <div className="flex flex-wrap gap-2 mb-4">
-                  {project.technologies.map((tech, i) => (
-                    <span key={i} className="text-xs bg-accent px-2 py-1 rounded-full">
-                      {tech}
-                    </span>
-                  ))}
-                </div>
-                <div className="flex space-x-2">
-                  <Button size="sm" variant="outline" className="flex items-center gap-1" asChild>
-                    <a href={project.demoUrl} target="_blank" rel="noopener noreferrer">
-                      {project.isYoutube ? (
-                        <Youtube className="h-4 w-4" />
-                      ) : (
-                        <ExternalLink className="h-4 w-4" />
-                      )}
-                      {project.isYoutube ? "Watch on YouTube" : "View Project"}
-                    </a>
-                  </Button>
-                  <Button size="sm" variant="outline" className="flex items-center gap-1" asChild>
-                    <a href={project.repoUrl} target="_blank" rel="noopener noreferrer">
-                      <Github className="h-4 w-4" />
-                      Details
-                    </a>
-                  </Button>
-                </div>
-              </CardContent>
             </Card>
           ))}
         </div>
