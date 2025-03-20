@@ -1,5 +1,5 @@
 
-import { ExternalLink, Github, FileText } from "lucide-react";
+import { ExternalLink, Github, FileText, Youtube } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 
@@ -8,10 +8,11 @@ const WorkSection = () => {
     {
       title: "The 'I Don't Know' Podcast",
       description: "A podcast focused on understanding industries from first principles, featuring conversations with industry leaders and experts.",
-      image: "https://images.unsplash.com/photo-1590602847861-f357a9332bbc",
+      image: "/lovable-uploads/19d50a24-7c6c-4aaf-a972-768664840727.png",
       technologies: ["Podcasting", "Industry Analysis", "Interview"],
-      demoUrl: "#",
+      demoUrl: "https://www.youtube.com/@1dontknowpodcast",
       repoUrl: "#",
+      isYoutube: true,
     },
     {
       title: "30BYTHIRTY",
@@ -20,6 +21,7 @@ const WorkSection = () => {
       technologies: ["E-commerce", "Merchandise", "B2B Sales"],
       demoUrl: "#",
       repoUrl: "#",
+      isYoutube: false,
     },
     {
       title: "MEDRIVE",
@@ -28,6 +30,7 @@ const WorkSection = () => {
       technologies: ["Healthcare", "UHI", "Digital Records"],
       demoUrl: "#",
       repoUrl: "#",
+      isYoutube: false,
     },
   ];
 
@@ -64,16 +67,23 @@ const WorkSection = () => {
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, index) => (
-            <Card key={index} className="overflow-hidden hover:shadow-lg transition-shadow">
-              <div className="aspect-video relative overflow-hidden">
-                <img 
-                  src={project.image} 
-                  alt={project.title} 
-                  className="w-full h-full object-cover transition-transform hover:scale-105 duration-300"
-                />
+            <Card 
+              key={index} 
+              className="overflow-hidden hover:shadow-lg transition-shadow border-0 rounded-xl bg-gradient-to-br from-background to-muted"
+            >
+              <div className="relative">
+                <div className="aspect-video overflow-hidden">
+                  <img 
+                    src={project.image} 
+                    alt={project.title} 
+                    className="w-full h-full object-cover transition-transform hover:scale-105 duration-300"
+                  />
+                </div>
+                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4">
+                  <h3 className="text-xl font-medium text-white">{project.title}</h3>
+                </div>
               </div>
               <CardContent className="p-6">
-                <h3 className="text-xl font-medium mb-2">{project.title}</h3>
                 <p className="text-muted-foreground mb-4">{project.description}</p>
                 <div className="flex flex-wrap gap-2 mb-4">
                   {project.technologies.map((tech, i) => (
@@ -85,8 +95,12 @@ const WorkSection = () => {
                 <div className="flex space-x-2">
                   <Button size="sm" variant="outline" className="flex items-center gap-1" asChild>
                     <a href={project.demoUrl} target="_blank" rel="noopener noreferrer">
-                      <ExternalLink className="h-4 w-4" />
-                      View Project
+                      {project.isYoutube ? (
+                        <Youtube className="h-4 w-4" />
+                      ) : (
+                        <ExternalLink className="h-4 w-4" />
+                      )}
+                      {project.isYoutube ? "Watch on YouTube" : "View Project"}
                     </a>
                   </Button>
                   <Button size="sm" variant="outline" className="flex items-center gap-1" asChild>
@@ -111,7 +125,7 @@ const WorkSection = () => {
           
           <div className="space-y-6">
             {researchPapers.map((paper, index) => (
-              <Card key={index} className="hover:shadow-md transition-shadow">
+              <Card key={index} className="hover:shadow-md transition-shadow bg-white/50 backdrop-blur-sm border border-accent/20">
                 <CardContent className="p-6">
                   <h3 className="text-xl font-medium mb-2">{paper.title}</h3>
                   <p className="text-muted-foreground mb-4">{paper.description}</p>
