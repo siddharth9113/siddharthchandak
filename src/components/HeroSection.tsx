@@ -7,86 +7,78 @@ const HeroSection = () => {
   const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => {
-    // Trigger animations after component mount
     setIsLoaded(true);
   }, []);
 
   return (
-    <section className="min-h-screen flex items-center pt-20 pb-16 overflow-hidden relative">
-      {/* Abstract background elements */}
-      <div className="absolute inset-0 -z-10 opacity-20">
-        <div className="absolute top-1/4 left-10 w-72 h-72 rounded-full bg-gradient-to-r from-blue-300 to-purple-400 blur-3xl animate-pulse-slow"></div>
-        <div className="absolute bottom-1/4 right-10 w-80 h-80 rounded-full bg-gradient-to-r from-pink-300 to-primary blur-3xl animate-pulse-slow" style={{ animationDelay: "1s" }}></div>
+    <section className="min-h-screen flex items-center pt-20 pb-16 overflow-hidden relative bg-black text-white">
+      {/* Dynamic background elements */}
+      <div className="absolute inset-0 -z-10">
+        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-black via-black to-[#1a0b28] opacity-90"></div>
+        <div className="absolute bottom-0 left-0 w-full h-1/2 bg-gradient-to-t from-[#2c0f47] to-transparent opacity-40"></div>
+        <div className="absolute -top-[30%] -right-[10%] w-[70%] h-[70%] rounded-full bg-[#9b87f5] blur-[120px] opacity-20 animate-pulse-slow"></div>
+        <div className="absolute -bottom-[20%] -left-[10%] w-[60%] h-[60%] rounded-full bg-[#7e2bff] blur-[100px] opacity-15 animate-pulse-slow" style={{ animationDelay: "1.5s" }}></div>
       </div>
 
-      <div className="container mx-auto px-4 md:px-6">
+      <div className="container mx-auto px-4 md:px-6 relative z-10">
         <div className="flex flex-col md:flex-row items-center gap-12">
           <div 
-            className={`md:w-1/2 md:pr-10 mb-10 md:mb-0 transition-all duration-1000 ease-out ${
+            className={`w-full md:w-1/2 md:pr-10 mb-10 md:mb-0 transition-all duration-1000 ease-out ${
               isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
             }`}
           >
-            <h1 className="font-poppins text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6">
-              Hi, I'm{" "}
-              <span className="bg-clip-text text-transparent bg-gradient-to-r from-primary to-purple-400 relative">
-                Siddharth Chandak
-                <svg 
-                  className="absolute -bottom-2 left-0 w-full" 
-                  height="6" 
-                  viewBox="0 0 400 6" 
-                  fill="none" 
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path 
-                    d="M2 3.5C59.1819 2.5 307.5 -1 398 4" 
-                    stroke="url(#paint0_linear)" 
-                    strokeWidth="4" 
-                    strokeLinecap="round"
-                  />
-                  <defs>
-                    <linearGradient 
-                      id="paint0_linear" 
-                      x1="2" 
-                      y1="3" 
-                      x2="398" 
-                      y2="3" 
-                      gradientUnits="userSpaceOnUse"
-                    >
-                      <stop stopColor="#9b87f5" />
-                      <stop offset="1" stopColor="#D946EF" />
-                    </linearGradient>
-                  </defs>
-                </svg>
-              </span>
-            </h1>
+            <div className="overflow-hidden mb-2">
+              <h2 
+                className={`font-playfair text-2xl md:text-3xl font-bold tracking-wider text-[#9b87f5] transition-all duration-700 ${
+                  isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+                }`}
+                style={{ transitionDelay: "200ms" }}
+              >
+                welcome to my portfolio
+              </h2>
+            </div>
+            
+            <div className="overflow-hidden">
+              <h1 
+                className={`font-playfair text-5xl md:text-7xl lg:text-8xl font-bold leading-none mb-6 transition-all duration-700 ${
+                  isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-20"
+                }`}
+                style={{ transitionDelay: "400ms" }}
+              >
+                Siddharth<br/>
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#9b87f5] to-[#D946EF]">
+                  Chandak
+                </span>
+              </h1>
+            </div>
+            
             <p 
-              className="text-xl md:text-2xl text-muted-foreground mb-8 transition-all duration-1000 delay-300 ease-out"
-              style={{ 
-                opacity: isLoaded ? 1 : 0, 
-                transform: isLoaded ? "translateY(0)" : "translateY(10px)" 
-              }}
+              className={`text-xl md:text-2xl text-gray-400 mb-12 max-w-md transition-all duration-700 ${
+                isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+              }`}
+              style={{ transitionDelay: "600ms" }}
             >
               Entrepreneur, strategist, and researcher building impactful solutions at the intersection of business and technology.
             </p>
+            
             <div 
-              className="flex flex-col sm:flex-row gap-4 transition-all duration-1000 delay-500 ease-out"
-              style={{ 
-                opacity: isLoaded ? 1 : 0, 
-                transform: isLoaded ? "translateY(0)" : "translateY(10px)" 
-              }}
+              className={`flex flex-col sm:flex-row gap-6 transition-all duration-700 ${
+                isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+              }`}
+              style={{ transitionDelay: "800ms" }}
             >
               <Button 
                 size="lg" 
-                className="gap-2 group bg-gradient-to-r from-primary to-purple-500 hover:shadow-lg hover:shadow-primary/20 transition-all duration-300"
+                className="gap-2 group bg-white text-black hover:bg-white/90 hover:scale-105 transition-all duration-300 text-lg rounded-xl px-8 py-6 font-semibold"
                 onClick={() => document.getElementById('about')?.scrollIntoView()}
               >
-                Learn more about me
-                <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                Explore my work
+                <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform" />
               </Button>
               <Button 
                 size="lg" 
                 variant="outline" 
-                className="border-2 hover:bg-accent/50 transition-all duration-300"
+                className="border-2 border-gray-700 text-white hover:bg-white/10 hover:scale-105 transition-all duration-300 text-lg rounded-xl px-8 py-6 font-semibold"
                 onClick={() => document.getElementById('contact')?.scrollIntoView()}
               >
                 Get in touch
@@ -95,25 +87,25 @@ const HeroSection = () => {
           </div>
           
           <div 
-            className={`md:w-1/2 max-w-md mx-auto md:max-w-none transition-all duration-1000 delay-300 ease-out ${
-              isLoaded ? "opacity-100 translate-x-0" : "opacity-0 translate-x-10"
+            className={`w-full md:w-1/2 transition-all duration-1000 ${
+              isLoaded ? "opacity-100 translate-x-0" : "opacity-0 translate-x-20"
             }`}
+            style={{ transitionDelay: "300ms" }}
           >
-            <div className="relative">
-              {/* Decorative elements */}
-              <div className="absolute -top-6 -left-6 w-12 h-12 rounded-full bg-gradient-to-r from-pink-400 to-primary z-10 animate-bounce" style={{ animationDuration: "5s" }}></div>
-              <div className="absolute -bottom-6 -right-6 w-12 h-12 rounded-full bg-gradient-to-r from-blue-400 to-purple-400 z-10 animate-bounce" style={{ animationDuration: "4s", animationDelay: "1s" }}></div>
+            <div className="relative mx-auto max-w-md md:max-w-none">
+              {/* Animated circles */}
+              <div className="absolute -top-10 -left-10 w-20 h-20 rounded-full bg-[#9b87f5] opacity-20 animate-float"></div>
+              <div className="absolute -bottom-10 -right-10 w-32 h-32 rounded-full bg-[#D946EF] opacity-10 animate-float" style={{ animationDelay: "1s" }}></div>
               
-              {/* Glowing border effect */}
-              <div className="absolute -inset-1 bg-gradient-to-r from-primary via-purple-400 to-pink-500 rounded-2xl blur opacity-70 group-hover:opacity-100 animate-pulse-slow"></div>
-              
-              {/* Main image with mask and border */}
-              <div className="relative z-10 rounded-2xl overflow-hidden border-2 border-accent bg-white shadow-2xl shadow-primary/10">
+              {/* Main image */}
+              <div className="relative rounded-2xl overflow-hidden transform rotate-2 hover:rotate-0 transition-all duration-700">
+                <div className="absolute inset-0 bg-gradient-to-br from-[#9b87f5] to-[#D946EF] opacity-30"></div>
                 <img 
                   src="/lovable-uploads/0cefa0c7-b667-4d54-90ff-78ff179a4e87.png" 
                   alt="Siddharth Chandak" 
-                  className="w-full h-auto object-cover relative z-10 transition-transform duration-700 hover:scale-105"
+                  className="w-full h-auto relative z-10 scale-110 hover:scale-100 transition-transform duration-700"
                 />
+                <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-40"></div>
               </div>
             </div>
           </div>

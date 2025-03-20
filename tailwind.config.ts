@@ -70,7 +70,8 @@ export default {
 			},
 			fontFamily: {
 				sans: ['Inter', 'system-ui', 'sans-serif'],
-				poppins: ['Poppins', 'sans-serif']
+				poppins: ['Poppins', 'sans-serif'],
+				playfair: ['Playfair Display', 'serif']
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
