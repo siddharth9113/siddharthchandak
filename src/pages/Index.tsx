@@ -17,10 +17,10 @@ const Index = () => {
         <HeroSection />
         <AboutSection />
         <WorkSection />
-        <ResumeSection />
         <BlogSection />
-        <ContactSection />
+        <ResumeSection />
         <TimelineSection />
+        <ContactSection />
       </main>
       <Footer />
     </div>
