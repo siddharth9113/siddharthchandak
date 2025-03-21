@@ -1,18 +1,8 @@
 
 import { FileText, Download, CheckCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Progress } from "@/components/ui/progress";
 
 const ResumeSection = () => {
-  const skills = [
-    { name: "Strategy & Consulting", level: 90 },
-    { name: "Business Analysis", level: 85 },
-    { name: "Market Research", level: 88 },
-    { name: "Project Management", level: 82 },
-    { name: "Entrepreneurship", level: 92 },
-    { name: "Team Leadership", level: 85 },
-  ];
-
   const workExperience = [
     {
       position: "Consultative Sales Intern",
@@ -76,9 +66,9 @@ const ResumeSection = () => {
             A summary of my professional experience, education, and achievements.
           </p>
           <Button className="mt-6 gap-2" asChild>
-            <a href="#" download>
+            <a href="https://drive.google.com/file/d/1qkq59X_yyWRDT8Dsi9eJYZa7Coqyyln3/view?usp=sharing" target="_blank" rel="noopener noreferrer">
               <FileText className="h-4 w-4" />
-              Download Resume
+              View Resume PDF
               <Download className="h-4 w-4 ml-1" />
             </a>
           </Button>
@@ -123,20 +113,7 @@ const ResumeSection = () => {
           </div>
           
           <div>
-            <h3 className="section-subheading border-b pb-2 mb-6">Professional Skills</h3>
-            <div className="space-y-6">
-              {skills.map((skill, index) => (
-                <div key={index}>
-                  <div className="flex justify-between mb-2">
-                    <h4 className="font-medium">{skill.name}</h4>
-                    <span>{skill.level}%</span>
-                  </div>
-                  <Progress value={skill.level} className="h-2" />
-                </div>
-              ))}
-            </div>
-            
-            <h3 className="section-subheading border-b pb-2 mb-8 mt-12">Positions & Achievements</h3>
+            <h3 className="section-subheading border-b pb-2 mb-8">Positions & Achievements</h3>
             <div className="space-y-4">
               <div className="p-4 border rounded-lg hover:shadow-md transition-shadow">
                 <h4 className="font-medium">Teaching Assistant</h4>
