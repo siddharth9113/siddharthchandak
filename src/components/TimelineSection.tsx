@@ -1,9 +1,22 @@
 
-import { Briefcase } from "lucide-react";
 import { Separator } from "@/components/ui/separator";
 
 const TimelineSection = () => {
-  const timelineItems = [
+  // First, define items that are "Present" and sort by year, then define past items in reverse chronological order
+  const currentItems = [
+    {
+      year: "Oct 2024 - Present",
+      title: "Co-Founder",
+      organization: "THE 'I DON'T KNOW' PODCAST",
+    },
+    {
+      year: "Feb 2023 - Present",
+      title: "Co-Founder",
+      organization: "30BYTHIRTY",
+    },
+  ];
+
+  const pastItems = [
     {
       year: "May - Jul 2024",
       title: "Consultative Sales Intern",
@@ -25,21 +38,14 @@ const TimelineSection = () => {
       organization: "HELIOS CAPITAL",
     },
     {
-      year: "Oct 2024 - Present",
-      title: "Co-Founder",
-      organization: "THE 'I DON'T KNOW' PODCAST",
-    },
-    {
-      year: "Feb 2023 - Present",
-      title: "Co-Founder",
-      organization: "30BYTHIRTY",
-    },
-    {
       year: "May 2019 - Jan 2022",
       title: "Co-Founder",
       organization: "MEDRIVE",
     },
   ];
+
+  // Combine the sorted lists
+  const timelineItems = [...currentItems, ...pastItems];
 
   return (
     <section id="timeline" className="py-20">
