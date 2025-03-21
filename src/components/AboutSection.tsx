@@ -16,13 +16,13 @@ const AboutSection = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
           <div>
             <p className="text-lg mb-4">
-              I'm Siddharth, a student at Ashoka University (3.67/4 CGPA) with a background in strategy, entrepreneurship, and research. I'm passionate about identifying opportunities and building innovative solutions that make a difference.
+              I'm Siddharth, a 3rd year student pursuing Economics and Finance at Ashoka University. I'm super passionate about entrepreneurship, finance, and technology, always excited to discuss new ideas and meet new people.
             </p>
             <p className="text-lg mb-4">
-              My journey includes co-founding ventures like The 'I Don't Know' Podcast, 30BYTHIRTY, and MEDRIVE, as well as interning at companies like MOKOBARA LIFESTYLE, KAVACH, ROADO, and HELIOS CAPITAL.
+              Beyond my academic and professional interests, I'm a health enthusiast dedicated to nutrition and fitness. I find balance and inspiration by spending time in nature, which helps fuel my creative thinking.
             </p>
             <p className="text-lg">
-              With experience in both strategy consulting and entrepreneurship, I combine analytical thinking with creative problem-solving to drive results. When I'm not working, I enjoy exploring new ideas, learning about emerging technologies, and connecting with like-minded individuals.
+              My journey combines analytical thinking with creative problem-solving, allowing me to approach challenges from multiple perspectives. I'm constantly seeking opportunities to learn, grow, and make a meaningful impact.
             </p>
           </div>
           
@@ -68,9 +68,9 @@ const AboutSection = () => {
                 <div className="h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center mb-4">
                   <BookOpen className="h-6 w-6 text-primary" />
                 </div>
-                <h3 className="font-medium text-lg mb-2">My Education</h3>
+                <h3 className="font-medium text-lg mb-2">My Interests</h3>
                 <p className="text-muted-foreground">
-                  Ashoka University (3.67/4 CGPA) and National Public School, Bangalore (98.4%).
+                  Entrepreneurship, finance, technology, fitness, and spending time in nature.
                 </p>
               </CardContent>
             </Card>

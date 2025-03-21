@@ -14,23 +14,6 @@ const HeroSection = () => {
             <p className="text-xl md:text-2xl text-muted-foreground mb-8">
               Entrepreneur, strategist, and researcher building impactful solutions at the intersection of business and technology.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Button 
-                size="lg" 
-                className="gap-2 group"
-                onClick={() => document.getElementById('about')?.scrollIntoView()}
-              >
-                Learn more about me
-                <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
-              </Button>
-              <Button 
-                size="lg" 
-                variant="outline"
-                onClick={() => document.getElementById('contact')?.scrollIntoView()}
-              >
-                Get in touch
-              </Button>
-            </div>
           </div>
           
           <div className="md:w-1/2 animate-fade-in max-w-md mx-auto md:max-w-none" style={{ animationDelay: "0.4s" }}>
