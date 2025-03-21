@@ -1,5 +1,6 @@
 
 import { Briefcase } from "lucide-react";
+import { Separator } from "@/components/ui/separator";
 
 const TimelineSection = () => {
   const timelineItems = [
@@ -47,13 +48,24 @@ const TimelineSection = () => {
           <h2 className="section-heading">My Journey</h2>
         </div>
         
-        <div className="max-w-3xl mx-auto">
-          <ul className="space-y-3">
+        <div className="max-w-3xl mx-auto relative">
+          {/* Vertical line */}
+          <div className="absolute left-16 top-0 bottom-0 w-px bg-primary/30 -ml-px"></div>
+          
+          <ul className="space-y-8 relative">
             {timelineItems.map((item, index) => (
-              <li key={index} className="flex items-center gap-3">
-                <span className="text-primary font-medium w-32 shrink-0">{item.year}</span>
-                <span className="font-medium">{item.title}</span>
-                <span className="text-muted-foreground">• {item.organization}</span>
+              <li key={index} className="relative pl-24">
+                {/* Timeline dot */}
+                <div className="absolute left-16 top-1.5 w-3 h-3 rounded-full bg-primary -ml-1.5"></div>
+                
+                {/* Timeline content */}
+                <div className="flex flex-col">
+                  <span className="text-primary font-medium text-sm mb-1">{item.year}</span>
+                  <div className="flex items-center gap-2">
+                    <span className="font-medium">{item.title}</span>
+                    <span className="text-muted-foreground text-sm">• {item.organization}</span>
+                  </div>
+                </div>
               </li>
             ))}
           </ul>
