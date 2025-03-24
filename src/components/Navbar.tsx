@@ -27,7 +27,6 @@ const Navbar = () => {
     { name: "Research", href: "#research" },
     { name: "Resume", href: "#resume" },
     { name: "Blog", href: "#blog" },
-    { name: "Contact", href: "#contact" },
   ];
 
   return (
@@ -55,7 +54,9 @@ const Navbar = () => {
                 {item.name}
               </a>
             ))}
-            <Button className="ml-4">Contact Me</Button>
+            <Button className="ml-4" asChild>
+              <a href="mailto:siddharth.chandak_ug25@ashoka.edu.in">Contact Me</a>
+            </Button>
           </div>
 
           {/* Mobile Navigation Toggle */}
@@ -86,7 +87,9 @@ const Navbar = () => {
                   {item.name}
                 </a>
               ))}
-              <Button className="mt-2 w-full">Contact Me</Button>
+              <Button className="mt-2 w-full" asChild>
+                <a href="mailto:siddharth.chandak_ug25@ashoka.edu.in">Contact Me</a>
+              </Button>
             </div>
           </div>
         )}

@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -76,10 +77,10 @@ const ContactSection = () => {
                 <div>
                   <h4 className="font-medium mb-1">Phone</h4>
                   <a 
-                    href="tel:+1234567890" 
+                    href="tel:+919686816036" 
                     className="text-muted-foreground hover:text-primary transition-colors"
                   >
-                    +1 (234) 567-890
+                    +91 96868 16036
                   </a>
                 </div>
               </div>
@@ -91,7 +92,7 @@ const ContactSection = () => {
                 <div>
                   <h4 className="font-medium mb-1">Location</h4>
                   <p className="text-muted-foreground">
-                    San Francisco, California, USA
+                    Ashoka University, Haryana
                   </p>
                 </div>
               </div>
