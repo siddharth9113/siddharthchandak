@@ -1,5 +1,4 @@
-
-import { Github, Linkedin, Twitter, Mail } from "lucide-react";
+import { Linkedin, Twitter, Mail } from "lucide-react";
 
 const Footer = () => {
   return (
@@ -17,16 +16,7 @@ const Footer = () => {
           
           <div className="flex space-x-4">
             <a 
-              href="https://github.com" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="p-2 rounded-full bg-white hover:bg-primary hover:text-white transition-colors"
-              aria-label="GitHub"
-            >
-              <Github className="h-5 w-5" />
-            </a>
-            <a 
-              href="https://linkedin.com" 
+              href="https://www.linkedin.com/in/siddharthchandak" 
               target="_blank" 
               rel="noopener noreferrer"
               className="p-2 rounded-full bg-white hover:bg-primary hover:text-white transition-colors"
@@ -35,7 +25,7 @@ const Footer = () => {
               <Linkedin className="h-5 w-5" />
             </a>
             <a 
-              href="https://twitter.com" 
+              href="https://x.com/siddharth_9113" 
               target="_blank" 
               rel="noopener noreferrer"
               className="p-2 rounded-full bg-white hover:bg-primary hover:text-white transition-colors"
@@ -44,7 +34,7 @@ const Footer = () => {
               <Twitter className="h-5 w-5" />
             </a>
             <a 
-              href="mailto:contact@example.com" 
+              href="mailto:siddharth.chandak_ug25@ashoka.edu.in" 
               className="p-2 rounded-full bg-white hover:bg-primary hover:text-white transition-colors"
               aria-label="Email"
             >
@@ -55,11 +45,6 @@ const Footer = () => {
         
         <div className="border-t border-muted mt-8 pt-8 text-center text-sm text-muted-foreground">
           <p>© {new Date().getFullYear()} Siddharth Chandak. All rights reserved.</p>
-          <p className="mt-2">
-            <a href="#privacy" className="hover:text-primary transition-colors">Privacy Policy</a>
-            {" • "}
-            <a href="#terms" className="hover:text-primary transition-colors">Terms of Service</a>
-          </p>
         </div>
       </div>
     </footer>
