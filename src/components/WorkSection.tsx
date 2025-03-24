@@ -17,7 +17,7 @@ const WorkSection = () => {
     {
       title: "30BYTHIRTY",
       description: "A self-made brand providing custom merchandise to universities and enterprises in NCR, achieving sales of >₹3.2 Lakh in 6 months.",
-      image: "/lovable-uploads/a54a182b-f6df-4365-94a2-2b08efeabfa5.png",
+      image: "/lovable-uploads/78662df7-bae9-4a5c-94d7-03094e516560.png",
       technologies: ["E-commerce", "Merchandise", "B2B Sales"],
       demoUrl: "#",
       repoUrl: "#",
@@ -80,7 +80,7 @@ const WorkSection = () => {
                       className="w-full h-full object-contain md:object-cover transition-transform hover:scale-105 duration-300"
                       style={{ 
                         objectPosition: "center",
-                        padding: project.title === "30BYTHIRTY" || project.title === "MEDRIVE" ? "20px" : "0",
+                        padding: project.title === "MEDRIVE" ? "20px" : "0",
                         backgroundColor: project.title === "MEDRIVE" ? "white" : "transparent"
                       }}
                     />
