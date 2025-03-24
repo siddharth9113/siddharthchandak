@@ -65,7 +65,7 @@ const WorkSection = () => {
           </p>
         </div>
         
-        <div className="space-y-10">
+        <div className="max-w-4xl mx-auto space-y-10">
           {projects.map((project, index) => (
             <Card 
               key={index} 
@@ -73,7 +73,7 @@ const WorkSection = () => {
             >
               <div className="flex flex-col md:flex-row">
                 <div className="md:w-2/5 relative">
-                  <div className="h-full overflow-hidden">
+                  <div className="h-[200px] md:h-full overflow-hidden">
                     <img 
                       src={project.image} 
                       alt={project.title} 
@@ -125,7 +125,7 @@ const WorkSection = () => {
           ))}
         </div>
         
-        <div className="mt-20">
+        <div className="mt-20 max-w-4xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="section-heading">Research Papers</h2>
             <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
@@ -133,12 +133,12 @@ const WorkSection = () => {
             </p>
           </div>
           
-          <div className="space-y-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {researchPapers.map((paper, index) => (
-              <Card key={index} className="hover:shadow-md transition-shadow bg-white/50 backdrop-blur-sm border border-accent/20">
-                <CardContent className="p-6">
+              <Card key={index} className="hover:shadow-md transition-shadow bg-white/50 backdrop-blur-sm border border-accent/20 h-full flex flex-col">
+                <CardContent className="p-6 flex flex-col h-full">
                   <h3 className="text-xl font-medium mb-2">{paper.title}</h3>
-                  <p className="text-muted-foreground mb-4">{paper.description}</p>
+                  <p className="text-muted-foreground mb-4 flex-grow">{paper.description}</p>
                   <div className="flex flex-wrap gap-2 mb-4">
                     {paper.technologies.map((tech, i) => (
                       <span key={i} className="text-xs bg-accent px-2 py-1 rounded-full">
@@ -146,7 +146,7 @@ const WorkSection = () => {
                       </span>
                     ))}
                   </div>
-                  <Button size="sm" variant="outline" className="flex items-center gap-1" asChild>
+                  <Button size="sm" variant="outline" className="flex items-center gap-1 mt-auto" asChild>
                     <a href={paper.demoUrl} target="_blank" rel="noopener noreferrer">
                       <FileText className="h-4 w-4" />
                       View Research Paper
@@ -160,7 +160,7 @@ const WorkSection = () => {
         
         <div className="text-center mt-10">
           <Button size="lg" asChild>
-            <a href="#contact" rel="noopener noreferrer">
+            <a href="mailto:siddharth.chandak_ug25@ashoka.edu.in" rel="noopener noreferrer">
               Contact Me for More Projects
             </a>
           </Button>
