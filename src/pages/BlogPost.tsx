@@ -26,7 +26,6 @@ const BlogPost = () => {
       <p>If you've ever built something from scratch, you know the feeling. It's messy, unpredictable, and incredibly rewarding. Here's to the chaos of building something meaningful. 🚀</p>
     `,
     slug: "building-30bythirty-startup-journey",
-    image: "/lovable-uploads/78662df7-bae9-4a5c-94d7-03094e516560.png",
   };
 
   if (slug !== blogPost.slug) {
@@ -52,14 +51,6 @@ const BlogPost = () => {
             <ArrowLeft className="h-4 w-4 mr-2" />
             Back to Blog
           </Link>
-          
-          <div className="aspect-video overflow-hidden rounded-lg mb-8">
-            <img 
-              src={blogPost.image} 
-              alt={blogPost.title} 
-              className="w-full h-full object-cover"
-            />
-          </div>
           
           <h1 className="text-3xl md:text-4xl font-bold mb-4">{blogPost.title}</h1>
           

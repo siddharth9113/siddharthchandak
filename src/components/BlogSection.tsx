@@ -8,7 +8,6 @@ const BlogSection = () => {
     {
       title: "Building 30byThirty: A Startup Journey of Chaos, Hustle, and Small Wins",
       excerpt: "It all started with a simple problem—college societies and fests needed custom merch, but the process was always a headache...",
-      image: "/lovable-uploads/78662df7-bae9-4a5c-94d7-03094e516560.png",
       date: "June 10, 2024",
       readTime: "4 min read",
       slug: "building-30bythirty-startup-journey",
@@ -27,14 +26,7 @@ const BlogSection = () => {
         
         <div className="max-w-3xl mx-auto">
           {blogPosts.map((post, index) => (
-            <Card key={index} className="overflow-hidden hover:shadow-lg transition-shadow">
-              <div className="aspect-video relative overflow-hidden">
-                <img 
-                  src={post.image} 
-                  alt={post.title} 
-                  className="w-full h-full object-cover transition-transform hover:scale-105 duration-300"
-                />
-              </div>
+            <Card key={index} className="hover:shadow-lg transition-shadow">
               <CardContent className="p-6">
                 <div className="flex items-center text-sm text-muted-foreground mb-3">
                   <Calendar className="h-4 w-4 mr-1" />
