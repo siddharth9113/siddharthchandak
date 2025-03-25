@@ -1,12 +1,38 @@
 
-import { ExternalLink, Github, FileText, Youtube, ChevronRight } from "lucide-react";
+import { ExternalLink, Github, FileText, Youtube } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { Link } from "react-router-dom";
-import { projectsData } from "@/data/projects";
 
 const WorkSection = () => {
-  const projects = projectsData;
+  const projects = [
+    {
+      title: "The 'I Don't Know' Podcast",
+      description: "A podcast focused on understanding industries from first principles, featuring conversations with industry leaders and experts.",
+      image: "/lovable-uploads/19d50a24-7c6c-4aaf-a972-768664840727.png",
+      technologies: ["Podcasting", "Industry Analysis", "Interview"],
+      demoUrl: "https://www.youtube.com/@1dontknowpodcast",
+      repoUrl: "#",
+      isYoutube: true,
+    },
+    {
+      title: "30BYTHIRTY",
+      description: "A self-made brand providing custom merchandise to universities and enterprises in NCR, achieving sales of >₹3.2 Lakh in 6 months.",
+      image: "/lovable-uploads/78662df7-bae9-4a5c-94d7-03094e516560.png",
+      technologies: ["E-commerce", "Merchandise", "B2B Sales"],
+      demoUrl: "#",
+      repoUrl: "#",
+      isYoutube: false,
+    },
+    {
+      title: "MEDRIVE",
+      description: "One of the first apps in India focused on digitizing medical records, built with guidance from Mr. Parag Dhol, VC behind Policy Bazaar.",
+      image: "/lovable-uploads/bfe2bb3d-c307-4b52-9af6-127de15ff8a1.png",
+      technologies: ["Healthcare", "UHI", "Digital Records"],
+      demoUrl: "#",
+      repoUrl: "#",
+      isYoutube: false,
+    },
+  ];
 
   const researchPapers = [
     {
@@ -66,9 +92,7 @@ const WorkSection = () => {
                 <div className="md:w-3/5">
                   <CardContent className="p-6">
                     <h3 className="text-xl font-medium mb-2 hidden md:block">{project.title}</h3>
-                    <div className="text-muted-foreground mb-4">
-                      <p>{project.description.split('\n\n')[0]}</p>
-                    </div>
+                    <p className="text-muted-foreground mb-4">{project.description}</p>
                     <div className="flex flex-wrap gap-2 mb-4">
                       {project.technologies.map((tech, i) => (
                         <span key={i} className="text-xs bg-accent px-2 py-1 rounded-full">
@@ -84,14 +108,14 @@ const WorkSection = () => {
                           ) : (
                             <ExternalLink className="h-4 w-4" />
                           )}
-                          {project.isYoutube ? "Watch on YouTube" : "View Demo"}
+                          {project.isYoutube ? "Watch on YouTube" : "View Project"}
                         </a>
                       </Button>
                       <Button size="sm" variant="outline" className="flex items-center gap-1" asChild>
-                        <Link to={`/project/${project.id}`}>
-                          <ChevronRight className="h-4 w-4" />
-                          Know More
-                        </Link>
+                        <a href={project.repoUrl} target="_blank" rel="noopener noreferrer">
+                          <Github className="h-4 w-4" />
+                          Details
+                        </a>
                       </Button>
                     </div>
                   </CardContent>
