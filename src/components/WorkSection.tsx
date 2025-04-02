@@ -11,16 +11,14 @@ const WorkSection = () => {
       image: "/lovable-uploads/19d50a24-7c6c-4aaf-a972-768664840727.png",
       technologies: ["Podcasting", "Industry Analysis", "Interview"],
       demoUrl: "https://www.youtube.com/@1dontknowpodcast",
-      repoUrl: "#",
       isYoutube: true,
     },
     {
       title: "30BYTHIRTY",
       description: "A self-made brand providing custom merchandise to universities and enterprises in NCR, achieving sales of >₹3.2 Lakh in 6 months.",
-      image: "/lovable-uploads/78662df7-bae9-4a5c-94d7-03094e516560.png",
+      image: "/lovable-uploads/cb8ebfde-69b0-4ed7-9e54-56bbde6ccaed.png",
       technologies: ["E-commerce", "Merchandise", "B2B Sales"],
-      demoUrl: "#",
-      repoUrl: "#",
+      demoUrl: "https://custom-fest-merch.lovable.app/#contact",
       isYoutube: false,
     },
     {
@@ -29,7 +27,6 @@ const WorkSection = () => {
       image: "/lovable-uploads/bfe2bb3d-c307-4b52-9af6-127de15ff8a1.png",
       technologies: ["Healthcare", "UHI", "Digital Records"],
       demoUrl: "#",
-      repoUrl: "#",
       isYoutube: false,
     },
   ];
@@ -109,12 +106,6 @@ const WorkSection = () => {
                             <ExternalLink className="h-4 w-4" />
                           )}
                           {project.isYoutube ? "Watch on YouTube" : "View Project"}
-                        </a>
-                      </Button>
-                      <Button size="sm" variant="outline" className="flex items-center gap-1" asChild>
-                        <a href={project.repoUrl} target="_blank" rel="noopener noreferrer">
-                          <Github className="h-4 w-4" />
-                          Details
                         </a>
                       </Button>
                     </div>
