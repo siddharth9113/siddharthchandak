@@ -1,3 +1,4 @@
+
 import { ExternalLink, Github, FileText, Youtube } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -27,6 +28,18 @@ const WorkSection = () => {
       technologies: ["Healthcare", "UHI", "Digital Records"],
       demoUrl: "#",
       isYoutube: false,
+      additionalLinks: [
+        {
+          text: "Watch our launch event",
+          url: "https://drive.google.com/file/d/1idUlsQ2DfMiFUHVfUpy0CEJ83G8lY8S5/view?usp=drivesdk",
+          icon: "Youtube"
+        },
+        {
+          text: "Our Pitch deck",
+          url: "https://www.canva.com/design/DAE8tRZfC4s/6cSaOirPHGqt2eUoVjiSkw/view?utm_content=DAE8tRZfC4s&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h502a5a60e7",
+          icon: "FileText"
+        }
+      ]
     },
   ];
 
@@ -96,7 +109,7 @@ const WorkSection = () => {
                         </span>
                       ))}
                     </div>
-                    <div className="flex space-x-2">
+                    <div className="flex flex-wrap gap-2">
                       <Button size="sm" variant="outline" className="flex items-center gap-1" asChild>
                         <a href={project.demoUrl} target="_blank" rel="noopener noreferrer">
                           {project.isYoutube ? (
@@ -108,6 +121,19 @@ const WorkSection = () => {
                            project.title === "30BYTHIRTY" ? "View Website" : "View Project"}
                         </a>
                       </Button>
+                      
+                      {project.additionalLinks && project.additionalLinks.map((link, i) => (
+                        <Button key={i} size="sm" variant="outline" className="flex items-center gap-1" asChild>
+                          <a href={link.url} target="_blank" rel="noopener noreferrer">
+                            {link.icon === "Youtube" ? (
+                              <Youtube className="h-4 w-4" />
+                            ) : (
+                              <FileText className="h-4 w-4" />
+                            )}
+                            {link.text}
+                          </a>
+                        </Button>
+                      ))}
                     </div>
                   </CardContent>
                 </div>
