@@ -1,4 +1,3 @@
-
 import { ExternalLink, Github, FileText, Youtube } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -110,17 +109,19 @@ const WorkSection = () => {
                       ))}
                     </div>
                     <div className="flex flex-wrap gap-2">
-                      <Button size="sm" variant="outline" className="flex items-center gap-1" asChild>
-                        <a href={project.demoUrl} target="_blank" rel="noopener noreferrer">
-                          {project.isYoutube ? (
-                            <Youtube className="h-4 w-4" />
-                          ) : (
-                            <ExternalLink className="h-4 w-4" />
-                          )}
-                          {project.isYoutube ? "Watch on YouTube" : 
-                           project.title === "30BYTHIRTY" ? "View Website" : "View Project"}
-                        </a>
-                      </Button>
+                      {project.title !== "MEDRIVE" && (
+                        <Button size="sm" variant="outline" className="flex items-center gap-1" asChild>
+                          <a href={project.demoUrl} target="_blank" rel="noopener noreferrer">
+                            {project.isYoutube ? (
+                              <Youtube className="h-4 w-4" />
+                            ) : (
+                              <ExternalLink className="h-4 w-4" />
+                            )}
+                            {project.isYoutube ? "Watch on YouTube" : 
+                             project.title === "30BYTHIRTY" ? "View Website" : "View Project"}
+                          </a>
+                        </Button>
+                      )}
                       
                       {project.additionalLinks && project.additionalLinks.map((link, i) => (
                         <Button key={i} size="sm" variant="outline" className="flex items-center gap-1" asChild>
