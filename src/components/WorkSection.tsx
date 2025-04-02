@@ -1,4 +1,3 @@
-
 import { ExternalLink, Github, FileText, Youtube } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -105,7 +104,8 @@ const WorkSection = () => {
                           ) : (
                             <ExternalLink className="h-4 w-4" />
                           )}
-                          {project.isYoutube ? "Watch on YouTube" : "View Project"}
+                          {project.isYoutube ? "Watch on YouTube" : 
+                           project.title === "30BYTHIRTY" ? "View Website" : "View Project"}
                         </a>
                       </Button>
                     </div>
