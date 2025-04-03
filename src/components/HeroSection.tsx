@@ -8,11 +8,9 @@ const HeroSection = () => {
           animationDelay: "0.2s"
         }}>
             <h1 className="font-poppins text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-4">
-              Hi, I'm <span className="text-primary">Siddharth Chandak</span>
+              Hi, I'm <span className="text-primary">Siddharth Chandak!</span>
             </h1>
-            <p className="text-xl md:text-2xl text-muted-foreground mb-8">
-              Entrepreneur, strategist, and researcher building impactful solutions at the intersection of business and technology.
-            </p>
+            <p className="text-xl mb-8 md:text-2xl font-normal text-slate-950">A 21 year old aspiring entrepreneur and budding researcher pursuing an undergraduate degree in Economics and Finance at Ashoka University.</p>
           </div>
           
           <div className="md:w-1/2 animate-fade-in max-w-md mx-auto md:max-w-none" style={{
