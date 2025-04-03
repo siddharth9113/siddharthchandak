@@ -1,10 +1,7 @@
-
 import { User, Code, Briefcase, BookOpen } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
-
 const AboutSection = () => {
-  return (
-    <section id="about" className="py-20 bg-secondary">
+  return <section id="about" className="py-20 bg-secondary">
       <div className="container mx-auto px-4 md:px-6">
         <div className="text-center mb-12">
           <h2 className="section-heading">About Me</h2>
@@ -15,12 +12,8 @@ const AboutSection = () => {
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
           <div>
-            <p className="text-lg mb-4">
-              I'm Siddharth, a 3rd year student pursuing Economics and Finance at Ashoka University. I'm super passionate about entrepreneurship, finance, and technology, always excited to discuss new ideas and meet new people.
-            </p>
-            <p className="text-lg mb-4">
-              Beyond my academic and professional interests, I'm a health enthusiast dedicated to nutrition and fitness. I find balance and inspiration by spending time in nature, which helps fuel my creative thinking.
-            </p>
+            <p className="text-lg mb-4">I'm Siddharth Chandak, a 3rd year undergraduate student pursuing Economics and Finance at Ashoka University. Being born in a marwari family and raised in the startup city of Bangalore, entrepreneurship naturally came in my DNA. I have been able to work on 2 of my ventures, failing to scale one while currently running the other, both of which you can find below.</p>
+            <p className="text-lg mb-4">Beyond my academic and professional interests, I'm a health enthusiast who loves learning more about nutrition and playing every sport under the sun. Along with this, I also thoroughly enjoy spending time in the mountains and am a rookie trekker</p>
             <p className="text-lg">
               My journey combines analytical thinking with creative problem-solving, allowing me to approach challenges from multiple perspectives. I'm constantly seeking opportunities to learn, grow, and make a meaningful impact.
             </p>
@@ -77,8 +70,6 @@ const AboutSection = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default AboutSection;
