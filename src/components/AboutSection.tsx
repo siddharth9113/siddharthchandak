@@ -13,7 +13,12 @@ const AboutSection = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
           <div>
             <p className="text-lg mb-4">I'm Siddharth Chandak, a 3rd year undergraduate student pursuing Economics and Finance at Ashoka University. Being born in a marwari family and raised in the startup city of Bangalore, entrepreneurship naturally came in my DNA. I have been able to work on 2 of my ventures, failing to scale one while currently running the other, both of which you can find below.</p>
-            <p className="text-lg mb-4">Beyond my academic and professional interests, I'm a health enthusiast who loves learning more about nutrition and playing every sport under the sun. Along with this, I also thoroughly enjoy spending time in the mountains and am a rookie trekker</p>
+            <p className="text-lg mb-4">Beyond my academic and professional interests, I'm a health enthusiast who loves learning more about nutrition and playing every sport under the sun. Along with this, I also thoroughly enjoy spending time in the mountains and am a rookie trekker.
+
+I enjoy having meaningful conversations especially with new folks and learn more - about ANY topic. Feel free to reach out to me and I would love to have coffee chat with you :)
+
+
+          </p>
             <p className="text-lg"></p>
           </div>
           
