@@ -24,9 +24,7 @@ const AboutSection = () => {
                   <User className="h-6 w-6 text-primary" />
                 </div>
                 <h3 className="font-medium text-lg mb-2">Who I Am</h3>
-                <p className="text-muted-foreground">
-                  A strategy-focused entrepreneur with a passion for building impactful solutions.
-                </p>
+                <p className="text-muted-foreground">A undergrad student with a passion for building impactful solutions.</p>
               </CardContent>
             </Card>
             
@@ -36,9 +34,7 @@ const AboutSection = () => {
                   <Code className="h-6 w-6 text-primary" />
                 </div>
                 <h3 className="font-medium text-lg mb-2">What I Do</h3>
-                <p className="text-muted-foreground">
-                  Build ventures, develop strategies, and create impactful business solutions.
-                </p>
+                <p className="text-muted-foreground">Study Economics, building my own venture and spend time working out</p>
               </CardContent>
             </Card>
             
